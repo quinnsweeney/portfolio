@@ -12,7 +12,7 @@ function App() {
         links={[
           { text: "Home", link: "/" },
           { text: "Resume", link: "/resume" },
-          { text: "About me", link: "about-me" },
+          { text: "About me", link: "/about-me" },
         ]}
       />
       <Routes>

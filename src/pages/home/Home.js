@@ -2,7 +2,7 @@ export default function Home(props) {
   return (
     <div className="Home">
       <div className="content">
-        <h1 className="name">Quinn Sweeney</h1>
+        <h1 className="name text-3xl font-bold underline">Quinn Sweeney</h1>
         <p className="intro">
           Lorem ipsum odor amet, consectetuer adipiscing elit. Lectus etiam
           fermentum cras leo fusce per. Convallis curabitur hac; habitasse duis
