@@ -1,6 +1,6 @@
 import { Button } from "@headlessui/react";
 import Project from "../../components/Nav/Project/Project";
-import Pdf from "../../resources/SweeneyQuinnResumeNEW.pdf";
+import Pdf from "../../resources/SweeneyQuinnResume.pdf";
 
 export default function Home(props) {
   return (
@@ -13,7 +13,7 @@ export default function Home(props) {
           <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
             Studying MIS & Computer Science at the University of Alabama
           </p>
-          <a href={Pdf} target="_blank">
+          <a href={Pdf} target="_blank" rel="noreferrer">
             <Button class="mt-4 rounded bg-indigo-500 py-2 px-4 text-sm text-white data-[hover]:bg-indigo-400 data-[active]:bg-sky-600">
               Download Resume
             </Button>
