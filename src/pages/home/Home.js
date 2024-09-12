@@ -1,4 +1,6 @@
 import { Button } from "@headlessui/react";
+import Project from "../../components/Nav/Project/Project";
+import Pdf from "../../resources/SweeneyQuinnResumeNEW.pdf";
 
 export default function Home(props) {
   return (
@@ -11,58 +13,48 @@ export default function Home(props) {
           <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
             Studying MIS & Computer Science at the University of Alabama
           </p>
-          <a href="/" target="_blank">
+          <a href={Pdf} target="_blank">
             <Button class="mt-4 rounded bg-indigo-500 py-2 px-4 text-sm text-white data-[hover]:bg-indigo-400 data-[active]:bg-sky-600">
               Download Resume
             </Button>
           </a>
         </div>
-        <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="space-y-4">
-            <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-              Ski Area Pathfinding
-            </h3>
-            <span class="bg-green-700 text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-              In progress
-            </span>
-            <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-              A full stack web application that helps users navigate ski resorts
-            </p>
-            <div>
-              <a href="https://www.google.com" target="_blank" className="py-2">
-                <Button
-                  href="https://www.google.com"
-                  className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700"
-                >
-                  View Repository
-                </Button>
-              </a>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-              Official website
-            </h3>
-            <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-              Flowbite helps you connect with friends, family and communities of
-              people who share your interests.
-            </p>
-            <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700">
-              View Repository
-            </Button>
-          </div>
-          <div class="space-y-4">
-            <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-              Official website
-            </h3>
-            <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-              Flowbite helps you connect with friends, family and communities of
-              people who share your interests.
-            </p>
-            <Button className="rounded bg-sky-600 py-2 px-4 text-sm text-white data-[hover]:bg-sky-500 data-[active]:bg-sky-700">
-              View Repository
-            </Button>
-          </div>
+        <div class="grid grid-cols-1 mt-16 text-center sm:mt-20 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <Project
+            title="Ski Area Pathfinding"
+            status={false}
+            desc="A full stack web application that helps users navigate ski resorts"
+          />
+          <Project
+            title="Portfolio Website"
+            status={true}
+            statusText="Completed 2024"
+            href="https://github.com/quinnsweeney/portfolio"
+            desc="This website is my most recent completed project, built using
+              React with Tailwind & HeadlessUI"
+          />
+          <Project
+            title="Read-Only Reddit Client"
+            status={true}
+            statusText="Completed 2021"
+            href="https://quinnsweeney11.github.io/reddit-client/"
+            desc="A Reddit client built with React & Redux."
+          />
+          <Project
+            title="Ecommerce API"
+            status={true}
+            statusText="Completed 2021"
+            href="https://github.com/quinnsweeney11/ecommerce-api/tree/master"
+            desc="API for an ecommerce website built with Express JS. The plan at
+              the time was to build out a front end as well, which never
+              happened."
+          />
+          <Project
+            title="Jamming"
+            status={false}
+            statusText="Lost Access to Code :("
+            desc="A web application that let users sign in to their Spotify account & create playlists that would actually be saved to their profile. Unfortunately I lost access to my old Github account, and the Repo was private."
+          />
         </div>
       </div>
     </div>
