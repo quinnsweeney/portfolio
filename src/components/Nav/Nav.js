@@ -17,7 +17,6 @@ function classNames(...classes) {
 
 export default function Nav(props) {
   const location = useLocation();
-  console.log(location.pathname);
   let links = [...props.links];
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -40,23 +39,25 @@ export default function Nav(props) {
           <div className="flex flex-1 items-center justify-center sm:items-stretch justify-start">
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                {links.map((item) => (
-                  <a
-                    key={item.text}
-                    href={item.link}
-                    aria-current={
-                      location.pathname === item.link ? item.link : undefined
-                    }
-                    className={classNames(
-                      location.pathname === item.link
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
-                    )}
-                  >
-                    {item.text}
-                  </a>
-                ))}
+                {links.map((item) => {
+                  return (
+                    <a
+                      key={item.text}
+                      href={item.link}
+                      aria-current={
+                        location.pathname === item.link ? item.link : undefined
+                      }
+                      className={classNames(
+                        `#${location.pathname}` === item.link
+                          ? "bg-gray-900 text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "rounded-md px-3 py-2 text-sm font-medium"
+                      )}
+                    >
+                      {item.text}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
